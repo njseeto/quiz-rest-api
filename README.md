@@ -16,3 +16,31 @@ To get this project running you need:
 PORT=PORT_NUMBER
 DATABASE_CONNECTION=mongodb://<dbuser>:<dbpassword>@ds163103.mlab.com:63103/quiz-rest-api
 ```
+
+To start the server: `npm run dev`
+
+POSTS
+To add a new question to the MongoDB you can add it via the endpoint `/questions` in the following structure:
+
+```
+{
+	"description":"What was Maya Angelou's real name?",
+	"alternatives": [
+		{
+			"text": "Marguerite Johnson",
+			"isCorrect": true
+		},
+		{
+			"text": "Madeline Joseph"
+		},
+		{
+			"text": "Maybelline Beth"
+		},
+		{
+			"text": "Marisol Clark"
+		}
+	]
+}
+```
+
+Note the default for the `isCorrect` flag is `false`.
